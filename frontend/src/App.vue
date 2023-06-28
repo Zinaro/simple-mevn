@@ -1,9 +1,18 @@
-<script setup>
+<template>
+  <Navbar />
+  <div class="page-wrap">
+    <router-view></router-view>
+  </div>
+</template>
 
+<script>
+import Navbar from '@/components/Navbar.vue';
+export default {
+  name: "App",
+  components: { Navbar }
+}
 </script>
 
-<template>
-  <h1>Hello From Vue!</h1>
-</template>
+
 
 <style scoped></style>
