@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Cart from '../views/CartPage.vue';
 import ItemDetail from '../views/ItemDetailPage.vue';
 import Items from '../views/ItemsPage.vue';
+import NotFound from '../views/NotFoundPage.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,6 +18,10 @@ const router = createRouter({
     {
       path: '/items/:itemId',
       component: ItemDetail,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: NotFound,
     },
   ],
 });
