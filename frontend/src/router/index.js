@@ -3,10 +3,15 @@ import Cart from '../views/CartPage.vue';
 import ItemDetail from '../views/ItemDetailPage.vue';
 import Items from '../views/ItemsPage.vue';
 import NotFound from '../views/NotFoundPage.vue';
+import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    {
+      path: '/',
+      component: HomeView,
+    },
     {
       path: '/cart',
       component: Cart,
